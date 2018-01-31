@@ -282,6 +282,9 @@ class PyKinectRuntime(object):
                 return self._body_frame_bodies.copy()
             else:
                 return None
+            
+    def get_camera_intrinsics(self):
+        return self._mapper.GetDepthCameraIntrinsics()
 
 
     def body_joint_to_color_space(self, joint): 
